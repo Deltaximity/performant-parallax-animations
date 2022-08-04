@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grid-margin: 10%;
+    --yellow: #FCFF88;
+    --white: #F7F7F7;
+    --gray: #CCC;
+    --black: #000;
+    --staat: 'Staatliches', cursive;
+}
+
+html {scroll-behavior: smooth;}
+
+body {
+    background-image: radial-gradient(circle, #dddddd, #d0d0d0, #c3c3c3, #b7b7b7, #aaaaaa);
+    /* background-image: radial-gradient(circle, #ffffff, #f2f2f2, #e5e5e5, #d9d9d9, #cccccc); */
+    /* background-image: radial-gradient(circle, #333333, #2a2a2a, #222222, #1a1a1a, #111111); */
+    /* background-position: fixed; */
+    min-width: 100vw;
+    height: 100vh;
+    font-family: var(--staat);
+    /* background-image: url(./wave.jpeg); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+nav {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background-color: #F7F7F750;
+    backdrop-filter: blur(10px);
+}
+
+nav div a {
+    padding-left: 40px;
+    transition: .2s;
+}
+
+nav div a:hover {
+    letter-spacing: 4px;
+    color: var(--yellow);
+}
+
+#logo {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+#delta {
+    clip-path: polygon(80% 100%, 100% 100%, 50% 0, 0 100%, 20% 100%, 50% 40%);
+    /* clip-path: polygon(85% 100%, 100% 100%, 50% 0, 0 100%, 15% 100%, 50% 30%); */
+    /* clip-path: polygon(87% 100%, 100% 100%, 50% 0, 0 100%, 13% 100%, 50% 26%); */
+    background-color: var(--yellow);
+    width: 30rem;
+    height: 30rem;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+header {
+    height: 100vh;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--grid-margin);
+}
+
+section p {
+    max-width: 500px;
+    font-size: 1.3rem;
+    line-height: 40px;
+    color: var(--black);
+}
+
+section div {
+    width: 500px;
+    height: 400px;
+    background-image: url(./wave.jpeg);
+}
+
+footer {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* padding: 0 var(--grid-margin); */
+    background-color: #1C1C1C10;
+    /* background-image: linear-gradient(to bottom, #fff0, #aaa); */
+    color: var(--black);
+}
+
+footer div div {
+    width: 200px;
+    height: 140px;
+    margin: 10px 0;
+    background-image: url(./wave.jpeg);
+}
+
+.sect {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+    width: 100%;
+    /* background-color: var(--yellow); */
+    /* outline: 1px solid red; */
+    color: var(--black);
+}
+
+#foreground, #subject, #background {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+}
+
+#foreground {
+    z-index: 10;
+    font-size: 30rem;
+    filter: blur(5px);
+}
+
+#subject {
+    z-index: 5;
+    font-size: 8rem;
+}
+
+#background {
+    z-index: -1;
+    font-size: 3rem;
+    /* filter: blur(5px); */
+}
+
+#foreground .sect {margin: 300px 0;}
+#subject .sect {margin: 300px 0;}
+#background .sect {margin: 300px 0;}
