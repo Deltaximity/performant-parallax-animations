@@ -12,6 +12,5 @@ window.addEventListener('scroll', () => {
 
 sections.forEach(section => {
     let rand = Math.round(Math.random(5, 70) * 70);
-    console.log(rand);
     section.style.padding = `0 0 0 ${rand}%`;
 });
