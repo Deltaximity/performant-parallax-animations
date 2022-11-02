@@ -155,6 +155,4 @@ footer div div {
     /* filter: blur(5px); */
 }
 
-#foreground .sect {margin: 300px 0;}
-#subject .sect {margin: 300px 0;}
-#background .sect {margin: 300px 0;}
+#foreground .sect, #subject .sect, #background .sect {margin: 300px 0;}
